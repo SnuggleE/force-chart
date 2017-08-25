@@ -116,8 +116,8 @@ export default {
     });
     let option = {
       title: {
-        text: 'Les Miserables',
-        subtext: 'Default layout',
+        text: '学校商家合作关系图',
+        subtext: '',
         top: 'bottom',
         left: 'right'
       },
@@ -131,7 +131,7 @@ export default {
       animation: false,
       series : [
         {
-          name: 'Les Miserables',
+          name: '合作关系',
           type: 'graph',
           layout: 'force',
           data: context.relationData.nodes,
@@ -140,11 +140,13 @@ export default {
           roam: true,
           label: {
             normal: {
+                show:true,
               position: 'right'
             }
           },
           force: {
-            repulsion: 100
+            repulsion: 100,
+            edgeLength:300
           }
         }
       ]
